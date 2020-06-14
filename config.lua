@@ -25,14 +25,14 @@ Config.Zones = {
 	ShopInside = {
 		Pos     = vector3(-1200.4, -1719.6, 3.4),
 		Size    = {x = 1.5, y = 1.5, z = 1.0},
-		Heading = -20.0,
+		Heading = 218.84,
 		Type    = -1
 	},
 
 	ShopOutside = {
 		Pos     = vector3(-1200.4, -1719.6, 3.4),
 		Size    = {x = 1.5, y = 1.5, z = 1.0},
-		Heading = 330.0,
+		Heading = 218.84,
 		Type    = -1
 	},
 
@@ -42,7 +42,14 @@ Config.Zones = {
 		Type  = -1
 	},
 
-	GiveBackVehicle = {},						--Disable Vehicle Rent
+	GiveBackVehicle = {
+		Pos   = vector3(-18.2, -1078.5, 25.6),
+		Size  = {x = 3.0, y = 3.0, z = -10.0},
+		Type  = (Config.EnablePlayerManagement and 1 or -1)
+	},
 
-	ResellVehicle = {}							--Disable Resell
+	ResellVehicle = {
+		Pos   = vector3(-44.6, -1080.7, 25.6),
+		Size  = {x = 3.0, y = 3.0, z = -10.0},
+		Type  = 1
 }
