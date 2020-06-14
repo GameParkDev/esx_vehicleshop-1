@@ -333,9 +333,9 @@ function OpenResellerMenu()
 			{label = _U('depop_vehicle'),                  value = 'depop_vehicle'},
 			{label = _U('return_provider'),                value = 'return_provider'},
 			{label = _U('create_bill'),                    value = 'create_bill'},
-			{label = _U('get_rented_vehicles'),            value = 'get_rented_vehicles'},
+		--[[{label = _U('get_rented_vehicles'),            value = 'get_rented_vehicles'},-]]		--disable rent
 			{label = _U('set_vehicle_owner_sell'),         value = 'set_vehicle_owner_sell'},
-			{label = _U('set_vehicle_owner_rent'),         value = 'set_vehicle_owner_rent'},
+		--[[{label = _U('set_vehicle_owner_rent'),         value = 'set_vehicle_owner_rent'},-]]	--disable rent
 			{label = _U('deposit_stock'),                  value = 'put_stock'},
 			{label = _U('take_stock'),                     value = 'get_stock'}
 	}}, function(data, menu)
