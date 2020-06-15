@@ -1,7 +1,7 @@
 INSERT INTO `vehicle_categories` (name, label) VALUES
     ('high', 'High End'),
 	('mid', 'Mid End'),
-	('low', 'Low End'),
+	('low', 'Low End')
 ;
 
 INSERT INTO `vehicles` (name, model, price, category) VALUES
