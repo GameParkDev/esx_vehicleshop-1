@@ -67,9 +67,8 @@ CREATE TABLE `vehicle_categories` (
 );
 
 INSERT INTO `vehicle_categories` (name, label) VALUES
-	--('compacts','Compacts'), - Transfer to Local Car Dealer
+	
 	('coupes','Coupés'),
-	--('sedans','Sedans'), 	 - Transfer to Local Car Dealer
 	('sports','Sports'),
 	('sportsclassics','Sports Classics'),
 	('super','Super'),
@@ -79,6 +78,13 @@ INSERT INTO `vehicle_categories` (name, label) VALUES
 	('vans','Vans'),
 	('motorcycles','Motos')
 ;
+
+DELETE FROM 'vehicle_categories' where 
+name='sedans' or 
+name='compacts'
+;
+--('sedans','Sedans'), 	 - Transfer to Local Car Dealer
+--('compacts','Compacts'), - Transfer to Local Car Dealer
 
 CREATE TABLE `vehicles` (
 	`name` varchar(60) NOT NULL,
@@ -113,6 +119,11 @@ INSERT INTO `vehicles` (name, model, price, category) VALUES
 	('Virgo','virgo',14000,'muscle'),
 	('Vigero','vigero',12500,'muscle'),
 	('Voodoo','voodoo',7200,'muscle'),
+	/*('Blista','blista',8000,'compacts'),
+	('Brioso R/A','brioso',18000,'compacts'),
+	('Issi','issi2',10000,'compacts'),
+	('Panto','panto',10000,'compacts'),
+	('Prairie','prairie',12000,'compacts'),*/
 	('Bison','bison',45000,'vans'),
 	('Bobcat XL','bobcatxl',32000,'vans'),
 	('Burrito','burrito3',19000,'vans'),
@@ -129,6 +140,21 @@ INSERT INTO `vehicles` (name, model, price, category) VALUES
 	('Surfer','surfer',12000,'vans'),
 	('Youga','youga',10800,'vans'),
 	('Youga Luxuary','youga2',14500,'vans'),
+	/*('Asea','asea',5500,'sedans'),
+	('Cognoscenti','cognoscenti',55000,'sedans'),
+	('Emperor','emperor',8500,'sedans'),
+	('Fugitive','fugitive',12000,'sedans'),
+	('Glendale','glendale',6500,'sedans'),
+	('Intruder','intruder',7500,'sedans'),
+	('Premier','premier',8000,'sedans'),
+	('Primo Custom','primo2',14000,'sedans'),
+	('Regina','regina',5000,'sedans'),
+	('Schafter','schafter2',25000,'sedans'),
+	('Stretch','stretch',90000,'sedans'),
+	('Super Diamond','superd',130000,'sedans'),
+	('Tailgater','tailgater',30000,'sedans'),
+	('Warrener','warrener',4000,'sedans'),
+	('Washington','washington',9000,'sedans'),*/
 	('Baller','baller2',40000,'suvs'),
 	('Baller Sport','baller3',60000,'suvs'),
 	('Cavalcade','cavalcade2',55000,'suvs'),
@@ -165,8 +191,8 @@ INSERT INTO `vehicles` (name, model, price, category) VALUES
 	('Blazer Sport','blazer4',8500,'offroad'),
 	('Brawler','brawler',45000,'offroad'),
 	('Bubsta 6x6','dubsta3',120000,'offroad'),
-	('Dune Buggy','dune',200000,'offroad'),
-	('Guardian','guardian',400000,'offroad'),
+	('Dune Buggy','dune',8000,'offroad'),
+	('Guardian','guardian',45000,'offroad'),
 	('Rebel','rebel2',35000,'offroad'),
 	('Sandking','sandking',55000,'offroad'),
 	--('The Liberator','monster',210000,'offroad'),
@@ -203,7 +229,7 @@ INSERT INTO `vehicles` (name, model, price, category) VALUES
 	('Jester','jester',65000,'sports'),
 	('Jester(Racecar)','jester2',135000,'sports'),
 	('Khamelion','khamelion',38000,'sports'),
-	('Kuruma','kuruma',200000,'sports'),
+	('Kuruma','kuruma',30000,'sports'),
 	('Lynx','lynx',40000,'sports'),
 	('Mamba','mamba',70000,'sports'),
 	('Massacro','massacro',65000,'sports'),
@@ -212,30 +238,30 @@ INSERT INTO `vehicles` (name, model, price, category) VALUES
 	('Penumbra','penumbra',28000,'sports'),
 	('Rapid GT','rapidgt',35000,'sports'),
 	('Rapid GT Convertible','rapidgt2',45000,'sports'),
-	('Schafter V12','schafter3',2000000,'sports'),
+	('Schafter V12','schafter3',50000,'sports'),
 	('Seven 70','seven70',39500,'sports'),
-	('Sultan','sultan',150000,'sports'),
+	('Sultan','sultan',15000,'sports'),
 	('Surano','surano',50000,'sports'),
 	('Tropos','tropos',40000,'sports'),
 	('Verlierer','verlierer2',70000,'sports'),
-	('Adder','adder',1000000,'super'),
-	('Banshee 900R','banshee2',1000000,'super'),
-	('Bullet','bullet',1000000,'super'),
-	('Cheetah','cheetah',1500000,'super'),
-	('Entity XF','entityxf',1500000,'super'),
-	('ETR1','sheava',1500000,'super'),
-	('FMJ','fmj',1500000,'super'),
-	('Infernus','infernus',1500000,'super'),
-	('Osiris','osiris',1600000,'super'),
-	('Pfister','pfister811',1000000,'super'),
-	('RE-7B','le7b',1000000,'super'),
+	('Adder','adder',900000,'super'),
+	('Banshee 900R','banshee2',255000,'super'),
+	('Bullet','bullet',90000,'super'),
+	('Cheetah','cheetah',375000,'super'),
+	('Entity XF','entityxf',425000,'super'),
+	('ETR1','sheava',220000,'super'),
+	('FMJ','fmj',185000,'super'),
+	('Infernus','infernus',180000,'super'),
+	('Osiris','osiris',160000,'super'),
+	('Pfister','pfister811',85000,'super'),
+	('RE-7B','le7b',325000,'super'),
 	('Reaper','reaper',150000,'super'),
-	('Sultan RS','sultanrs',500000,'super'),
-	('T20','t20',1000000,'super'),
-	('Turismo R','turismor',1200000,'super'),
-	('Tyrus','tyrus',1000000,'super'),
-	('Vacca','vacca',1000000,'super'),
-	--('Voltic','voltic',90000,'super'),
+	('Sultan RS','sultanrs',65000,'super'),
+	('T20','t20',300000,'super'),
+	('Turismo R','turismor',350000,'super'),
+	('Tyrus','tyrus',600000,'super'),
+	('Vacca','vacca',120000,'super'),
+	('Voltic','voltic',90000,'super'),
 	('X80 Proto','prototipo',2500000,'super'),
 	('Zentorno','zentorno',1500000,'super'),
 	('Akuma','AKUMA',7500,'motorcycles'),
@@ -281,16 +307,16 @@ INSERT INTO `vehicles` (name, model, price, category) VALUES
 	('Woflsbane','wolfsbane',9000,'motorcycles'),
 	('Zombie','zombiea',9500,'motorcycles'),
 	('Zombie Luxuary','zombieb',12000,'motorcycles'),
-	--('blazer5', 'blazer5', 1755600, 'offroad'),
+	('blazer5', 'blazer5', 1755600, 'offroad'),
 	--('Ruiner 2', 'ruiner2', 5745600, 'muscle'),
-	('Voltic 2', 'voltic2', 3830400, 'super'),
+	--('Voltic 2', 'voltic2', 3830400, 'super'),
 	--('Ardent', 'ardent', 1150000, 'sportsclassics'),
 	--('Oppressor', 'oppressor', 3524500, 'super'),
 	('Visione', 'visione', 2250000, 'super'),
 	('Retinue', 'retinue', 615000, 'sportsclassics'),
 	('Cyclone', 'cyclone', 1890000, 'super'), 
 	('Rapid GT3', 'rapidgt3', 885000, 'sportsclassics'),
-	('raiden', 'raiden', 1500000, 'sports'),
+	--('raiden', 'raiden', 1375000, 'sports'),
 	('Yosemite', 'yosemite', 485000, 'muscle'),
 	--('Deluxo', 'deluxo', 4721500, 'sportsclassics'),
 	('Pariah', 'pariah', 1420000, 'sports'),
@@ -306,8 +332,51 @@ INSERT INTO `vehicles` (name, model, price, category) VALUES
 	('Viseris', 'viseris', 875000, 'sportsclassics'),
 	('Autarch', 'autarch', 1955000, 'super'),
 	('Comet 5', 'comet5', 1145000, 'sports'), 
-	('Neon', 'neon', 3000000, 'sports'),
+	('Neon', 'neon', 1500000, 'sports'),
 	('Revolter', 'revolter', 1610000, 'sports'),
 	('Sentinel3', 'sentinel3', 650000, 'sports'),
-	('Hustler', 'hustler', 625000, 'muscle'),
+	('Hustler', 'hustler', 625000, 'muscle')
 ;
+
+UPDATE 'vehicles'
+SET price='Philppines'WHERE CustomerID='1';
+
+DELETE FROM 'vehicles' where 
+model='rumpo' or  
+model='stromberg' or
+model='deluxo' or
+model='ardent' or
+model='oppressor' or
+model='blazer5' or
+model='ruiner2' or
+model='voltic' or
+model='monster' or
+;
+
+
+UPDATE 'vehicles'
+SET price=
+	case model
+   	when 'dune' then 200000
+	when 'guardian' then 400000
+	when 'kuruma' then 2000000
+	when 'guardian' then 400000
+	when 'schafter3' then 2000000
+	when 'sultan' then 1500000
+	when 'guardian' then 400000
+	when 'adder' then 1000000
+	when 'banshee2' then 1000000
+	when 'bullet' then 1000000
+	when 'cheetah' then 1500000
+	when 'entityxf' then 1500000
+	when 'sheava' then 1500000
+	when 'fmj' then 1500000
+	when 'infernus' then 1000000
+	when 'osiris' then 1500000
+	when 'pfister811' then 1000000
+	when 'le7b' then 1000000
+	when  'neon' then 2500000
+end
+;
+
+UPDATE 'vehicles' SET category='super' where model='stretch';
