@@ -1,10 +1,10 @@
 USE `es_extended`;
 
-DELETE FROM 'vehicle_categories' WHERE name IN ('sedans', 'compacts');
+DELETE FROM `vehicle_categories` WHERE name IN ('sedans', 'compacts');
 
-DELETE FROM 'vehicles' WHERE model IN ('rumpo', 'stromberg', 'deluxo', 'ardent', 'oppressor', 'blazer5', 'ruiner2', 'voltic', 'monster');
+DELETE FROM `vehicles` WHERE model IN ('rumpo', 'stromberg', 'deluxo', 'ardent', 'oppressor', 'blazer5', 'ruiner2', 'voltic', 'monster');
 
-UPDATE 'vehicles'
+UPDATE `vehicles`
 SET price=
 	case model
    	when 'dune' then 200000
@@ -25,7 +25,7 @@ SET price=
 	when 'osiris' then 1500000
 	when 'pfister811' then 1000000
 	when 'le7b' then 1000000
-	when  'neon' then 2500000
+	when 'neon' then 2500000
 end
 ;
 
