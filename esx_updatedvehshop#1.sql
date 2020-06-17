@@ -14,7 +14,7 @@ model='oppressor' or
 model='blazer5' or
 model='ruiner2' or
 model='voltic' or
-model='monster' or
+model='monster'
 ;
 
 UPDATE 'vehicles'
