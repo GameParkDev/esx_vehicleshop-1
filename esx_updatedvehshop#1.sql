@@ -1,21 +1,8 @@
 USE `es_extended`;
 
-DELETE FROM 'vehicle_categories' where 
-name='sedans' or 
-name='compacts'
-;
+DELETE FROM 'vehicle_categories' WHERE name IN ('sedans', 'compacts');
 
-DELETE FROM 'vehicles' where 
-model='rumpo' or  
-model='stromberg' or
-model='deluxo' or
-model='ardent' or
-model='oppressor' or
-model='blazer5' or
-model='ruiner2' or
-model='voltic' or
-model='monster'
-;
+DELETE FROM 'vehicles' WHERE model IN ('rumpo', 'stromberg', 'deluxo', 'ardent', 'oppressor', 'blazer5', 'ruiner2', 'voltic', 'monster');
 
 UPDATE 'vehicles'
 SET price=
