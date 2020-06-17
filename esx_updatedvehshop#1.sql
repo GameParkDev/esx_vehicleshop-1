@@ -46,4 +46,4 @@ where model IN (
 	'neon'
 );
 
-UPDATE 'vehicles' SET category='super' where model='stretch';
+UPDATE `vehicles` SET category='super' where model='stretch';
