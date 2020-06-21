@@ -396,7 +396,7 @@ ESX.RegisterServerCallback('esx_vehicleshop:retrieveJobVehicles', function(sourc
 	local xPlayer = ESX.GetPlayerFromId(source)
 
 	MySQL.Async.fetchAll('SELECT * FROM owned_vehicles WHERE owner = @owner AND type = @type AND job = @job', {
-		['@owner'] = 'society:' .. xPlayer.identifier,
+		['@owner'] = 'society:' .. xPlayer.job.name,
 		['@type'] = type,
 		['@job'] = xPlayer.job.name
 	}, function(result)
